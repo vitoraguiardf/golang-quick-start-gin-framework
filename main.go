@@ -5,11 +5,14 @@ import (
 )
 
 func main() {
+	router := setupRouter()
+	router.Run()
+}
+
+func setupRouter() *gin.Engine {
 	router := gin.Default()
 	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
+		c.String(200, "pong")
 	})
-	router.Run()
+	return router
 }

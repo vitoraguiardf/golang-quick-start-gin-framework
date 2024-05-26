@@ -2,7 +2,10 @@ module github.com/vitoraguiardf/golang-quick-start-gin-framework
 
 go 1.22.3
 
-require github.com/gin-gonic/gin v1.10.0
+require (
+	github.com/gin-gonic/gin v1.10.0
+	github.com/go-playground/assert/v2 v2.2.0
+)
 
 require (
 	github.com/bytedance/sonic v1.11.7 // indirect
